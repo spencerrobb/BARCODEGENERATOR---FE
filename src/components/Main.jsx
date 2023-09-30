@@ -1,11 +1,8 @@
-import logo from './logo.svg';
-import './css/App.css'
-import Main from './components/Main';
+import React from "react";
 
-function App() {
-  return (
-    <div >
-     <div>
+function Main() {
+    return (
+        <div>
         <section class="login">
 		<div class="login_box">
 			<div class="left">
@@ -29,8 +26,7 @@ function App() {
 		</div>
 	</section>
         </div>
-    </div>
-  );
+    );
 }
 
-export default App;
+export default Main();
