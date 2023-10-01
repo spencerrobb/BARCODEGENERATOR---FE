@@ -1,8 +1,24 @@
-import React from "react";
 
-function Main() {
+import React, { useState } from "react";
+
+function Login(props) {
+
+	const [username , setUsername] = useState('');
+	const [password, setPassword] = useState('');
+
+	const handleUsername = (event)=> {
+		setUsername(event.target.value);
+		console.log(username);
+	}
+
+	const handlePassword = (event) => {
+		setPassword(event.target.value);
+		console.log(password);
+	}
+
+	
+
     return (
-        <div>
         <section class="login">
 		<div class="login_box">
 			<div class="left">
@@ -10,8 +26,8 @@ function Main() {
 				<div class="contact">
 					<form action="">
 						<h3>SIGN IN</h3>
-						<input type="text" placeholder="USERNAME"/>
-						<input type="text" placeholder="PASSWORD"/>
+						<input type="text" placeholder="USERNAME" required onChange={handleUsername}/>
+						<input type="text" placeholder="PASSWORD" required onChange={handlePassword}/>
 						<button class="submit">LET'S GO</button>
 					</form>
 				</div>
@@ -25,8 +41,8 @@ function Main() {
 			</div>
 		</div>
 	</section>
-        </div>
+     
     );
 }
 
-export default Main();
+export default Login;
